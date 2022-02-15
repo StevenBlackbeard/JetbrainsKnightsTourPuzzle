@@ -4,7 +4,6 @@ def board_dims():
         if ''.join(dimensions).isdigit() and \
             len(dimensions) == 2 and \
             int(dimensions[0]) > 0 and int(dimensions[1]) > 0:
-            # dimensions = [int(x) for x in dimensions]
             cols = int(dimensions[0])
             rows = int(dimensions[1])
             break
@@ -38,7 +37,6 @@ def locate_knight():
             start_pos = [int(x) for x in start_pos]
             location = find_in_list_of_list(board_slots, start_pos)
             board[location[0]][location[1]] = 'X'.rjust(digits)
-            # board[start_pos[1] - 1][start_pos[0] - 1] = " " * (digits - 1) + "X"
             break
         else:
             print("Invalid position!")
